@@ -1,7 +1,7 @@
 [
     {
-        "ConfigFile": "Config.json",
-        "ConfigType": "kvp",
-        "ConfigFormat": "{0}={1}"
+        "ConfigFile":"Config/Config.json",
+        "AutoMap":true,
+        "ConfigType":"json"
     }
 ]
