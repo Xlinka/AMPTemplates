@@ -4,7 +4,7 @@
         "UpdateSourcePlatform":"All",
         "UpdateSource":"SteamCMD",
         "UpdateSourceData":"2519830",
-        "UpdateSourceArgs": "2519830 -beta headless -betapassword {{BetaPassword}}",
+        "UpdateSourceArgs":"2519830 -betapassword {{BetaPassword}}",
         "UpdateSourceTarget":"{{$FullRootDir}}2519830",
         "UpdateSourceVersion":"headless"
     },
