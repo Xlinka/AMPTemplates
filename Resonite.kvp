@@ -26,6 +26,7 @@ Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
 Meta.AppConfigId=
 Meta.ImportableExtensions=[]
+Meta.AppConfigId=9adbef97-36c9-45c3-a8be-3e0b9ae99287
 
 App.DisplayName=Resonite
 App.RootDir=./resonite/
