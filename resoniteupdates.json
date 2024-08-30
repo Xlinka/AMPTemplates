@@ -1,7 +1,7 @@
 [
     {
         "UpdateStageName": "Resonite Download",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2519830",
         "UpdateSourceArgs": "2519830",
@@ -11,35 +11,35 @@
     },
     {
         "UpdateStageName": "Data Directory Creation",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}Data",
         "Condition": "IfNotExists"
     },
     {
         "UpdateStageName": "Cache Directory Creation",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}Cache",
         "Condition": "IfNotExists"
     },
     {
         "UpdateStageName": "Logs Directory Creation",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}Logs",
         "Condition": "IfNotExists"
     },
     {
         "UpdateStageName": "Config Directory Creation",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}Config",
         "Condition": "IfNotExists"
     },
     {
         "UpdateStageName": "DefaultConfig.json Download",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Xlinka/AMPTemplates/main/ResoDefaultconf.json",
         "UpdateSourceArgs": "Config.json",
@@ -49,9 +49,20 @@
     },
     {
         "UpdateStageName": "Dotnet Directory Creation",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullRootDir}}2519830/Dotnet",
+        "Condition": "IfNotExists"
+    },
+    {
+        "UpdateStageName": "ASP.NET Core Runtime Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://dotnetcli.azureedge.net/dotnet/aspnetcore/Runtime/{{DotnetVersion}}/aspnetcore-runtime-{{DotnetVersion}}-win-x64.zip",
+        "UpdateSourceTarget": "{{$FullRootDir}}2519830/Dotnet",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
         "Condition": "IfNotExists"
     },
     {
