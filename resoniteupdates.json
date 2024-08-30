@@ -1,9 +1,17 @@
 [
     {
-        "UpdateStageName": "SteamCMD Server Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "2519830",
-        "UpdateSourceArgs": "+app_update 2519830 -beta headless -betapassword <insert_password_here> validate +quit"
+        "UpdateStageName":"SteamCMD Resonite Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"2519830",
+        "UpdateSourceArgs":"+app_update 2519830 -beta {{steamBetaBranch}} -betapassword {{steamBetaPassword}} validate",
+        "UpdateSourceTarget":"./resoniteheadless/",
+        "ForceDownloadPlatform":"Linux"
+    },
+    {
+        "UpdateStageName":"Set Executable Permissions",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"SetExecutableFlag",
+        "UpdateSourceArgs":"./resoniteheadless/Headless/Resonite.dll"
     }
 ]
