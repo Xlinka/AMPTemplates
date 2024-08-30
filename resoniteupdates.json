@@ -36,7 +36,7 @@
         "UpdateStageName":"DefaultConfig.json Download",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/resonitedefaultconfig.json",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Yellow-Dog-Man/JSONSchemas/main/schemas/HeadlessConfig.schema.json",
         "UpdateSourceArgs":"Config.json",
         "UpdateSourceTarget":"{{$FullBaseDir}}Config",
         "OverwriteExistingFiles":false
